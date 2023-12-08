@@ -8,17 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(StockModel.self) var model: StockModel
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ForEach(model.stocks, id: \.symbol) { stock in
+            StockRowView(stock: stock)
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
+        .environment(StockModel())
 }

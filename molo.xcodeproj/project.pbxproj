@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		5E007F932B0CC5A900A5428F /* moloApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E007F922B0CC5A900A5428F /* moloApp.swift */; };
-		5E007F952B0CC5A900A5428F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E007F942B0CC5A900A5428F /* ContentView.swift */; };
 		5E007F972B0CC5AC00A5428F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E007F962B0CC5AC00A5428F /* Assets.xcassets */; };
 		5E007F9A2B0CC5AC00A5428F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E007F992B0CC5AC00A5428F /* Preview Assets.xcassets */; };
 		5E007FA52B0CC5AD00A5428F /* moloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E007FA42B0CC5AD00A5428F /* moloTests.swift */; };
 		5E007FAF2B0CC5AD00A5428F /* moloUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E007FAE2B0CC5AD00A5428F /* moloUITests.swift */; };
 		5E007FB12B0CC5AD00A5428F /* moloUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E007FB02B0CC5AD00A5428F /* moloUITestsLaunchTests.swift */; };
+		5E96BCFC2B17517900906BC7 /* StockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96BCFA2B17517900906BC7 /* StockModel.swift */; };
+		5E96BCFD2B17517900906BC7 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96BCFB2B17517900906BC7 /* DataSource.swift */; };
+		5E96BD012B17518D00906BC7 /* StockRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96BCFF2B17518D00906BC7 /* StockRowView.swift */; };
+		5E96BD022B17518D00906BC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96BD002B17518D00906BC7 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,6 @@
 /* Begin PBXFileReference section */
 		5E007F8F2B0CC5A900A5428F /* molo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = molo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E007F922B0CC5A900A5428F /* moloApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moloApp.swift; sourceTree = "<group>"; };
-		5E007F942B0CC5A900A5428F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5E007F962B0CC5AC00A5428F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E007F992B0CC5AC00A5428F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5E007F9B2B0CC5AC00A5428F /* molo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = molo.entitlements; sourceTree = "<group>"; };
@@ -45,6 +47,10 @@
 		5E007FAA2B0CC5AD00A5428F /* moloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = moloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E007FAE2B0CC5AD00A5428F /* moloUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moloUITests.swift; sourceTree = "<group>"; };
 		5E007FB02B0CC5AD00A5428F /* moloUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moloUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5E96BCFA2B17517900906BC7 /* StockModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
+		5E96BCFB2B17517900906BC7 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		5E96BCFF2B17518D00906BC7 /* StockRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockRowView.swift; sourceTree = "<group>"; };
+		5E96BD002B17518D00906BC7 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +101,9 @@
 		5E007F912B0CC5A900A5428F /* molo */ = {
 			isa = PBXGroup;
 			children = (
+				5E96BCFE2B17518D00906BC7 /* Views */,
+				5E96BCF92B17517900906BC7 /* Model */,
 				5E007F922B0CC5A900A5428F /* moloApp.swift */,
-				5E007F942B0CC5A900A5428F /* ContentView.swift */,
 				5E007F962B0CC5AC00A5428F /* Assets.xcassets */,
 				5E007F9B2B0CC5AC00A5428F /* molo.entitlements */,
 				5E007F982B0CC5AC00A5428F /* Preview Content */,
@@ -127,6 +134,24 @@
 				5E007FB02B0CC5AD00A5428F /* moloUITestsLaunchTests.swift */,
 			);
 			path = moloUITests;
+			sourceTree = "<group>";
+		};
+		5E96BCF92B17517900906BC7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5E96BCFA2B17517900906BC7 /* StockModel.swift */,
+				5E96BCFB2B17517900906BC7 /* DataSource.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5E96BCFE2B17518D00906BC7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5E96BCFF2B17518D00906BC7 /* StockRowView.swift */,
+				5E96BD002B17518D00906BC7 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E007F952B0CC5A900A5428F /* ContentView.swift in Sources */,
+				5E96BD012B17518D00906BC7 /* StockRowView.swift in Sources */,
+				5E96BD022B17518D00906BC7 /* ContentView.swift in Sources */,
 				5E007F932B0CC5A900A5428F /* moloApp.swift in Sources */,
+				5E96BCFD2B17517900906BC7 /* DataSource.swift in Sources */,
+				5E96BCFC2B17517900906BC7 /* StockModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +449,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = molo/molo.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -446,6 +475,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = molo/molo.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
