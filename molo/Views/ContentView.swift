@@ -11,8 +11,16 @@ struct ContentView: View {
     @Environment(StockModel.self) var model: StockModel
 
     var body: some View {
-        ForEach(model.stocks, id: \.symbol) { stock in
-            StockRowView(stock: stock)
+        VStack {
+            Text("Stocks")
+                .font(.title)
+                .padding()
+            List {
+                ForEach(model.stocks, id: \.symbol) { stock in
+                    StockRowView(stock: stock)
+                }
+            }
+            .listStyle(PlainListStyle())
         }
     }
 }
