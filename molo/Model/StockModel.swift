@@ -11,7 +11,7 @@ struct Stock {
 @Observable
 class StockModel {
     var stocks: [Stock] = [
-        Stock(symbol: "SH601231", name: "中信证券"),
+        Stock(symbol: "SH601231", name: "环旭电子"),
         Stock(symbol: "SH601288", name: "农业银行")
     ]
 
