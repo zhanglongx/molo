@@ -1,11 +1,13 @@
 
 import SwiftUI
 
-struct Stock {
+struct Stock: Decodable {
     var symbol: Symbol
     var name: String
     var price: Double?
     var change: Double?
+
+    var cost: Double?
 }
 
 @Observable
@@ -15,7 +17,7 @@ class StockModel {
         Stock(symbol: "SH601288", name: "农业银行")
     ]
 
-    var dataSource: DataSource?
+    private var dataSource: DataSource?
 
     init() {
         dataSource = DataSource(stocks.map { $0.symbol }) { data in
