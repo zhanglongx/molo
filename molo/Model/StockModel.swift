@@ -14,4 +14,17 @@ class StockModel {
         Stock(symbol: "SH601231", name: "中信证券"),
         Stock(symbol: "SH601288", name: "农业银行")
     ]
+
+    var dataSource: DataSource?
+
+    init() {
+        dataSource = DataSource(stocks.map { $0.symbol }) { data in
+            for (i, stock) in self.stocks.enumerated() {
+                if let d = data.first(where: { $0.symbol == stock.symbol }) {
+                    self.stocks[i].price = Double(d.current)
+                    self.stocks[i].change = Double(d.percent)
+                }
+            }
+        }
+    }
 }

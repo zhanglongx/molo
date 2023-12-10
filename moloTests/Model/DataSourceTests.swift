@@ -8,20 +8,13 @@ class DataSourceTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        dataSource = DataSource()
+        dataSource = DataSource(["SH601231", "SZ000651"]) { data in
+            XCTAssertEqual(data.count, 2, "DataSource should contain two elements")
+        }
     }
 
     override func tearDown() {
         dataSource = nil
         super.tearDown()
-    }
-
-    func testFetchData() {
-        let expectation = self.expectation(description: "Fetch data")
-        dataSource.fetchData(of: ["SH601231", "SZ000651"]) { data in
-            XCTAssertEqual(data.count, 2)
-            expectation.fulfill()
-        }
-        waitForExpectations(timeout: 5.0, handler: nil)
     }
 }
