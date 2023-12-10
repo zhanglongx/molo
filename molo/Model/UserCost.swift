@@ -1,7 +1,7 @@
 import Foundation
 import Yams
 
-let filePath = "Documents/molo.yml"
+let filePath = "Documents/molo.yaml"
 
 func load() -> [Stock]? {
 

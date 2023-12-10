@@ -17,6 +17,8 @@
 		5E96BCFD2B17517900906BC7 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96BCFB2B17517900906BC7 /* DataSource.swift */; };
 		5E96BD012B17518D00906BC7 /* StockRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96BCFF2B17518D00906BC7 /* StockRowView.swift */; };
 		5E96BD022B17518D00906BC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96BD002B17518D00906BC7 /* ContentView.swift */; };
+		5ED189672B25FF3100E627FD /* UserCost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED189662B25FF3100E627FD /* UserCost.swift */; };
+		5ED1896A2B26003100E627FD /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = 5ED189692B26003100E627FD /* Yams */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,7 @@
 		5E96BCFB2B17517900906BC7 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		5E96BCFF2B17518D00906BC7 /* StockRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockRowView.swift; sourceTree = "<group>"; };
 		5E96BD002B17518D00906BC7 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5ED189662B25FF3100E627FD /* UserCost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCost.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ED1896A2B26003100E627FD /* Yams in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +143,7 @@
 		5E96BCF92B17517900906BC7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5ED189662B25FF3100E627FD /* UserCost.swift */,
 				5E96BCFA2B17517900906BC7 /* StockModel.swift */,
 				5E96BCFB2B17517900906BC7 /* DataSource.swift */,
 			);
@@ -170,6 +175,9 @@
 			dependencies = (
 			);
 			name = molo;
+			packageProductDependencies = (
+				5ED189692B26003100E627FD /* Yams */,
+			);
 			productName = molo;
 			productReference = 5E007F8F2B0CC5A900A5428F /* molo.app */;
 			productType = "com.apple.product-type.application";
@@ -242,6 +250,9 @@
 				Base,
 			);
 			mainGroup = 5E007F862B0CC5A800A5428F;
+			packageReferences = (
+				5ED189682B26003100E627FD /* XCRemoteSwiftPackageReference "Yams" */,
+			);
 			productRefGroup = 5E007F902B0CC5A900A5428F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -285,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E96BD012B17518D00906BC7 /* StockRowView.swift in Sources */,
+				5ED189672B25FF3100E627FD /* UserCost.swift in Sources */,
 				5E96BD022B17518D00906BC7 /* ContentView.swift in Sources */,
 				5E007F932B0CC5A900A5428F /* moloApp.swift in Sources */,
 				5E96BCFD2B17517900906BC7 /* DataSource.swift in Sources */,
@@ -609,6 +621,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5ED189682B26003100E627FD /* XCRemoteSwiftPackageReference "Yams" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jpsim/Yams";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5ED189692B26003100E627FD /* Yams */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5ED189682B26003100E627FD /* XCRemoteSwiftPackageReference "Yams" */;
+			productName = Yams;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5E007F872B0CC5A800A5428F /* Project object */;
 }
