@@ -11,11 +11,13 @@ let package = Package(
             name: "molo",
             targets: ["molo"]),
     ],
-    dependencies: [],
+    dependencies: [
+        .package(url: "https://github.com/jpsim/Yams.git", from: "5.0.6")
+    ],
     targets: [
         .target(
             name: "molo",
-            dependencies: [],
+            dependencies: ["Yams"],
             path: "molo",
             resources: [.process("Assets.xcassets"), .process("molo.entitlements")]),
         .testTarget(

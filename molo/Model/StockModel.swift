@@ -12,10 +12,6 @@ struct Stock: Decodable {
 
 @Observable
 class StockModel {
-    // var stocks: [Stock] = [
-    //     Stock(symbol: "SH601231", name: "环旭电子"),
-    //     Stock(symbol: "SH601288", name: "农业银行")
-    // ]
 
     var stocks = load() ?? [
         Stock(symbol: "SH601231", name: "环旭电子"),

@@ -36,7 +36,7 @@ class DataSource {
         self.fetchData()
     }
     
-    var apiUrl: URL {
+    private var apiUrl: URL {
         let u = "https://stock.xueqiu.com/v5/stock/realtime/quotec.json?symbol=" 
                       + symbols.joined(separator: ",")
         return URL(string: u)!

@@ -20,19 +20,19 @@ struct StockRowView: View {
                     .font(.title)
                     .bold()
                     .padding(.trailing)
-                Text(String(format: "%@", change))
+                Text(String(format: "%@", changeText))
                     .font(.subheadline)
                     .bold()
                     .foregroundColor(.white)
                     .padding(.horizontal, 10)
-                    .background(changColor)
+                    .background(changeColor)
                     .cornerRadius(5)
                     .padding(.trailing)
             }
         }
     }
 
-    var change: String {
+    var changeText: String {
         guard let change = stock.change else {
             return ""
         }
@@ -42,7 +42,7 @@ struct StockRowView: View {
         return String(format: "%@%.2f%%", sign, change)
     }
 
-    var changColor: Color {
+    var changeColor: Color {
         guard let change = stock.change else {
             return .gray
         }
@@ -54,7 +54,7 @@ struct StockRowView: View {
 #Preview {
     StockRowView(stock: Stock(
         symbol: "SH601231", 
-        name: "中信证券", 
+        name: "环旭电子", 
         price: 23.45, 
         change: -0.01))
 }
