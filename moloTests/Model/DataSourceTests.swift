@@ -24,7 +24,7 @@ class DataSourceTests: XCTestCase {
     func testfetchData() {
         let expectation = XCTestExpectation(description: "fetchData")
 
-        dataSource.fetchData(with: model)
+        dataSource.fetchData(model)
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             expectation.fulfill()

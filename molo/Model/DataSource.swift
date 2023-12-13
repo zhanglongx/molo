@@ -1,6 +1,5 @@
 
 import Foundation
-import Combine
 
 // SH601231
 typealias Symbol = String
@@ -28,7 +27,7 @@ class DataSource {
         var errorDescription: String?
     }
     
-    func fetchData(with model: StockModel) {
+    func fetchData(_ model: StockModel) {
         let u = apiUrl(model.symbols)
 
         URLSession.shared.dataTask(with: u) { data, _, _ in
