@@ -2,7 +2,6 @@ import Foundation
 import XCTest
 @testable import molo
 
-@available(macOS 10.15, iOS 13.0, *)
 class DataSourceTests: XCTestCase {
     var dataSource: DataSource!
 
@@ -12,7 +11,7 @@ class DataSourceTests: XCTestCase {
         super.setUp()
 
         model = StockModel()
-        dataSource = DataSource(with: model)
+        dataSource = DataSource()
     }
 
     override func tearDown() {
@@ -25,7 +24,7 @@ class DataSourceTests: XCTestCase {
     func testfetchData() {
         let expectation = XCTestExpectation(description: "fetchData")
 
-        dataSource.fetchData()
+        dataSource.fetchData(with: model)
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             expectation.fulfill()

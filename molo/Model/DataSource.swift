@@ -11,27 +11,11 @@ struct XueqiuData: Decodable {
     var percent: Float
 }
 
-@available(macOS 10.15, iOS 13.0, *)
 class DataSource {
 
-    private var model: StockModel
+    static let shared = DataSource()
 
-    private var timer: Timer?
-
-    init(with model: StockModel, timerInterval: TimeInterval = 300.0) {
-        self.model = model
-
-        timer = Timer.scheduledTimer(withTimeInterval: timerInterval, repeats: true) { [weak self] _ in
-            self?.fetchData()
-        }
-
-        // initial fetch
-        self.fetchData()
-    }
-
-    private var apiUrl: URL {
-        let symbols = model.stocks.map { $0.symbol }
-
+    private func apiUrl(_ symbols: [Symbol]) -> URL {
         let u = "https://stock.xueqiu.com/v5/stock/realtime/quotec.json?symbol=" 
                       + symbols.joined(separator: ",")
         return URL(string: u)!
@@ -44,8 +28,10 @@ class DataSource {
         var errorDescription: String?
     }
     
-    func fetchData() {
-        URLSession.shared.dataTask(with: apiUrl) { data, _, _ in
+    func fetchData(with model: StockModel) {
+        let u = apiUrl(model.symbols)
+
+        URLSession.shared.dataTask(with: u) { data, _, _ in
 
             // FIXME: handle error
             if let data = data {
@@ -54,10 +40,10 @@ class DataSource {
 
                 if let response = try? decoder.decode(Response.self, from: data) {
                     DispatchQueue.main.async {
-                        for (i, stock) in self.model.stocks.enumerated() {
+                        for (i, stock) in model.stocks.enumerated() {
                             if let d = response.data.first(where: { $0.symbol == stock.symbol }) {
-                                self.model.stocks[i].price = Double(d.current)
-                                self.model.stocks[i].change = Double(d.percent)
+                                model.stocks[i].price = Double(d.current)
+                                model.stocks[i].change = Double(d.percent)
                             }
                         }
                     }

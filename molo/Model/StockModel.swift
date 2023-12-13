@@ -39,6 +39,10 @@ class StockModel {
         }
     }
 
+    var symbols: [Symbol] {
+        stocks.map { $0.symbol }
+    }
+
     func add(_ stock: Stock) {
         stocks.append(stock)
 
