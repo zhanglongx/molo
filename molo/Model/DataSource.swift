@@ -2,8 +2,6 @@
 import Foundation
 import Combine
 
-let timerInterval = 300.0
-
 // SH601231
 typealias Symbol = String
 
@@ -16,17 +14,12 @@ struct XueqiuData: Decodable {
 @available(macOS 10.15, iOS 13.0, *)
 class DataSource {
 
-    private var symbols: [Symbol] = []
+    private var model: StockModel
 
     private var timer: Timer?
 
-    private var cancellables = Set<AnyCancellable>()
-
-    private var completion: ([XueqiuData]) -> Void
-
-    init(_ symbols: [Symbol], completion: @escaping ([XueqiuData]) -> Void) {
-        self.symbols = symbols
-        self.completion = completion
+    init(with model: StockModel, timerInterval: TimeInterval = 300.0) {
+        self.model = model
 
         timer = Timer.scheduledTimer(withTimeInterval: timerInterval, repeats: true) { [weak self] _ in
             self?.fetchData()
@@ -35,8 +28,10 @@ class DataSource {
         // initial fetch
         self.fetchData()
     }
-    
+
     private var apiUrl: URL {
+        let symbols = model.stocks.map { $0.symbol }
+
         let u = "https://stock.xueqiu.com/v5/stock/realtime/quotec.json?symbol=" 
                       + symbols.joined(separator: ",")
         return URL(string: u)!
@@ -50,13 +45,21 @@ class DataSource {
     }
     
     func fetchData() {
-        URLSession.shared.dataTask(with: apiUrl) { data, response, error in
+        URLSession.shared.dataTask(with: apiUrl) { data, _, _ in
+
+            // FIXME: handle error
             if let data = data {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
+
                 if let response = try? decoder.decode(Response.self, from: data) {
                     DispatchQueue.main.async {
-                        self.completion(response.data)
+                        for (i, stock) in self.model.stocks.enumerated() {
+                            if let d = response.data.first(where: { $0.symbol == stock.symbol }) {
+                                self.model.stocks[i].price = Double(d.current)
+                                self.model.stocks[i].change = Double(d.percent)
+                            }
+                        }
                     }
                 }
             }

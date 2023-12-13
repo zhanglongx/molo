@@ -6,15 +6,34 @@ import XCTest
 class DataSourceTests: XCTestCase {
     var dataSource: DataSource!
 
+    var model: StockModel!
+
     override func setUp() {
         super.setUp()
-        dataSource = DataSource(["SH601231", "SZ000651"]) { data in
-            XCTAssertEqual(data.count, 2, "DataSource should contain two elements")
-        }
+
+        model = StockModel()
+        dataSource = DataSource(with: model)
     }
 
     override func tearDown() {
         dataSource = nil
+        model = nil
+
         super.tearDown()
+    }
+
+    func testfetchData() {
+        let expectation = XCTestExpectation(description: "fetchData")
+
+        dataSource.fetchData()
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            expectation.fulfill()
+        }
+
+        wait(for: [expectation], timeout: 2.0)
+
+        XCTAssertNotNil(model.stocks[0].price)
+        XCTAssertNotNil(model.stocks[0].change)
     }
 }
