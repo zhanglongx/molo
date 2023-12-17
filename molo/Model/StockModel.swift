@@ -10,6 +10,18 @@ struct Stock: Codable {
     var cost: Double?
 }
 
+func EmptyStock() -> Stock {
+    Stock(symbol: "", name: "", price: nil, change: nil, cost: nil)
+}
+
+func CheckStock(_ stock: Stock) -> Bool {
+    if stock.symbol.isEmpty || stock.name.isEmpty {
+        return false
+    }
+
+    return true
+}
+
 @Observable
 class StockModel {
 
@@ -44,21 +56,37 @@ class StockModel {
     }
 
     func add(_ stock: Stock) {
-        stocks.append(stock)
-
-        saveUserCost()
+        action(stock) { stock in
+            if stocks.contains(where: { $0.symbol == stock.symbol }) {
+                update(stock)
+            } else {
+                stocks.append(stock)
+            }
+        }
     }
 
     func update(_ stock: Stock) {
-        if let i = stocks.firstIndex(where: { $0.symbol == stock.symbol }) {
-            stocks[i] = stock
+        action(stock) { stock in
+            if let i = stocks.firstIndex(where: { $0.symbol == stock.symbol }) {
+                stocks[i] = stock
+            } else {
+                return
+            }
         }
-
-        saveUserCost()
     }
 
     func del(_ stock: Stock) {
-        stocks.removeAll { $0.symbol == stock.symbol }
+        action(stock) { stock in
+            stocks.removeAll { $0.symbol == stock.symbol }
+        }
+    }
+
+    private func action (_ stock: Stock, _ action: (Stock) -> Void) {
+        if !CheckStock(stock) {
+            return
+        }
+
+        action(stock)
 
         saveUserCost()
     }
