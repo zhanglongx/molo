@@ -13,6 +13,7 @@
 		5E007FA52B0CC5AD00A5428F /* moloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E007FA42B0CC5AD00A5428F /* moloTests.swift */; };
 		5E007FAF2B0CC5AD00A5428F /* moloUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E007FAE2B0CC5AD00A5428F /* moloUITests.swift */; };
 		5E007FB12B0CC5AD00A5428F /* moloUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E007FB02B0CC5AD00A5428F /* moloUITestsLaunchTests.swift */; };
+		5E3DA33C2B29D31100EA47FB /* StockDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3DA33B2B29D31100EA47FB /* StockDetailView.swift */; };
 		5E96BCFC2B17517900906BC7 /* StockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96BCFA2B17517900906BC7 /* StockModel.swift */; };
 		5E96BCFD2B17517900906BC7 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96BCFB2B17517900906BC7 /* DataSource.swift */; };
 		5E96BD012B17518D00906BC7 /* StockRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96BCFF2B17518D00906BC7 /* StockRowView.swift */; };
@@ -47,6 +48,7 @@
 		5E007FAA2B0CC5AD00A5428F /* moloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = moloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E007FAE2B0CC5AD00A5428F /* moloUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moloUITests.swift; sourceTree = "<group>"; };
 		5E007FB02B0CC5AD00A5428F /* moloUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moloUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5E3DA33B2B29D31100EA47FB /* StockDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockDetailView.swift; sourceTree = "<group>"; };
 		5E96BCFA2B17517900906BC7 /* StockModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
 		5E96BCFB2B17517900906BC7 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		5E96BCFF2B17518D00906BC7 /* StockRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockRowView.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 		5E96BCFE2B17518D00906BC7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5E3DA33B2B29D31100EA47FB /* StockDetailView.swift */,
 				5E96BCFF2B17518D00906BC7 /* StockRowView.swift */,
 				5E96BD002B17518D00906BC7 /* ContentView.swift */,
 			);
@@ -288,6 +291,7 @@
 				5E96BD022B17518D00906BC7 /* ContentView.swift in Sources */,
 				5E007F932B0CC5A900A5428F /* moloApp.swift in Sources */,
 				5E96BCFD2B17517900906BC7 /* DataSource.swift in Sources */,
+				5E3DA33C2B29D31100EA47FB /* StockDetailView.swift in Sources */,
 				5E96BCFC2B17517900906BC7 /* StockModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,18 +10,44 @@ import SwiftUI
 struct ContentView: View {
     @Environment(StockModel.self) var model: StockModel
 
+    @State private var isPresented = false
+
+    @State private var selectedStock: Stock = EmptyStock()
+
     var body: some View {
         VStack {
-            Text("Stocks")
-                .font(.title)
+            HStack{
+                Text("Stocks")
+                    .font(.title)
+                    .padding()
+
+                Spacer()
+
+                Button(action: {
+                    isPresented = true
+                    selectedStock = EmptyStock()
+                }) {
+                    Image(systemName: "plus")
+                        .font(.title)
+                }
                 .padding()
+            }
             List {
                 ForEach(model.stocks, id: \.symbol) { stock in
                     StockRowView(stock: stock)
                 }
+                .onDelete(perform: delete)
             }
             .listStyle(PlainListStyle())
+            .sheet(isPresented: $isPresented) {
+                StockDetailView(stock: $selectedStock)
+            }
         }
+    }
+
+    private func delete(at offsets: IndexSet) {
+        let stock = model.stocks[offsets.first!]
+        model.del(stock)
     }
 }
 
