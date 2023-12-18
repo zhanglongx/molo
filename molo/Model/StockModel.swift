@@ -15,11 +15,7 @@ func EmptyStock() -> Stock {
 }
 
 func CheckStock(_ stock: Stock) -> Bool {
-    if stock.symbol.isEmpty || stock.name.isEmpty {
-        return false
-    }
-
-    return true
+    stock.symbol.isEmpty || stock.name.isEmpty
 }
 
 @Observable
