@@ -1,9 +1,3 @@
-//
-//  ContentView.swift
-//  molo
-//
-//  Created by zhlx on 2023/11/21.
-//
 
 import SwiftUI
 
@@ -32,22 +26,33 @@ struct ContentView: View {
                 }
                 .padding()
             }
+
             List {
                 ForEach(model.stocks, id: \.symbol) { stock in
                     StockRowView(stock: stock)
+                    .swipeActions() {
+                        Button() {
+                            model.del(stock)
+                        } label: {
+                            Image(systemName: "trash")
+                        }
+                        .tint(.red)
+
+                        Button() {
+                            selectedStock = stock
+                            isPresented = true
+                        } label: {
+                            Image(systemName: "pencil")
+                        }
+                        .tint(.blue)
+                    }
                 }
-                .onDelete(perform: delete)
             }
             .listStyle(PlainListStyle())
             .sheet(isPresented: $isPresented) {
                 StockDetailView(stock: $selectedStock)
             }
         }
-    }
-
-    private func delete(at offsets: IndexSet) {
-        let stock = model.stocks[offsets.first!]
-        model.del(stock)
     }
 }
 
