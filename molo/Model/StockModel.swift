@@ -14,8 +14,8 @@ func EmptyStock() -> Stock {
     Stock(symbol: "", name: "", price: nil, change: nil, cost: nil)
 }
 
-func CheckStock(_ stock: Stock) -> Bool {
-    stock.symbol.isEmpty || stock.name.isEmpty
+func IsValidStock(_ stock: Stock) -> Bool {
+    !(stock.symbol.isEmpty || stock.name.isEmpty)
 }
 
 @Observable
@@ -78,7 +78,7 @@ class StockModel {
     }
 
     private func action (_ stock: Stock, _ action: (Stock) -> Void) {
-        if !CheckStock(stock) {
+        if !IsValidStock(stock) {
             return
         }
 
