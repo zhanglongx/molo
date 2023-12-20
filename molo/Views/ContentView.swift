@@ -2,7 +2,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @Environment(StockModel.self) var model: StockModel
+@Environment(StockModel.self) var model: StockModel
 
     @State private var isPresented = false
 
@@ -17,14 +17,11 @@ struct ContentView: View {
 
                 Spacer()
 
-                Button(action: {
-                    selectedStock = EmptyStock()
-                    isPresented = true
-                }) {
-                    Image(systemName: "plus")
-                    .font(.title)
-                }
-                .padding()
+                #if os(iOS)
+                menuOniOS
+                #elseif os(macOS)
+                menuOnmacOS 
+                #endif
             }
 
             List {
@@ -60,6 +57,47 @@ struct ContentView: View {
         let stock = model.stocks[offsets.first!]
         model.del(stock)
     }
+    #if os(iOS)
+    private var menuOniOS: some View {
+        Menu {
+            Button(action: {
+                // Add your action here
+            }) {
+                Text("Add 1")
+            }
+            Button(action: {
+                // Add your action here
+            }) {
+                Text("Add 2")
+            }
+        } label: {
+            Image(systemName: "ellipsis.circle")
+                .font(.title)
+        }
+        .padding()
+    }
+    #endif
+
+    #if os(macOS)
+    private var menuOnmacOS: some View {
+        Button(action: {}) {
+            Image(systemName: "ellipsis.circle")
+                .font(.title)
+        }
+        .contextMenu {
+            Button(action: {
+                // Add your action here
+            }) {
+                Text("Add 1")
+            }
+            Button(action: {
+                // Add your action here
+            }) {
+                Text("Add 2")
+            }
+        }
+    }
+    #endif
 }
 
 #Preview {
