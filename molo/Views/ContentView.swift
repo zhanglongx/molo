@@ -12,8 +12,8 @@ struct ContentView: View {
         VStack {
             HStack{
                 Text("Stocks")
-                    .font(.title)
-                    .padding()
+                .font(.title)
+                .padding()
 
                 Spacer()
 
@@ -22,7 +22,7 @@ struct ContentView: View {
                     selectedStock = EmptyStock()
                 }) {
                     Image(systemName: "plus")
-                        .font(.title)
+                    .font(.title)
                 }
                 .padding()
             }
@@ -58,5 +58,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .environment(StockModel())
+    .environment(StockModel())
 }

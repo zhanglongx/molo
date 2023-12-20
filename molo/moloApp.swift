@@ -1,9 +1,3 @@
-//
-//  moloApp.swift
-//  molo
-//
-//  Created by zhlx on 2023/11/21.
-//
 
 import SwiftUI
 import Combine
@@ -23,10 +17,10 @@ struct moloApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(model)
-                .onReceive(timer) { _ in
-                    DataSource.shared.fetchData(model)
-                }
+            .environment(model)
+            .onReceive(timer) { _ in
+                DataSource.shared.fetchData(model)
+            }
         }
     }
 }

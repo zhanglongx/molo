@@ -1,3 +1,4 @@
+
 import SwiftUI
 
 struct StockRowView: View {
@@ -7,27 +8,29 @@ struct StockRowView: View {
         HStack {
             VStack(alignment: .leading) {
                 Text(stock.name)
-                    .font(.title)
-                    .bold()
+                .font(.title)
+                .bold()
+
                 Text(stock.symbol)
-                    .font(.subheadline)
+                .font(.subheadline)
             }
 
             Spacer()
 
             VStack(alignment: .trailing) {
                 Text(String(format: "%.2f", stock.price ?? 0.0))
-                    .font(.title)
-                    .bold()
-                    .padding(.trailing)
+                .font(.title)
+                .bold()
+                .padding(.trailing)
+
                 Text(String(format: "%@", changeText))
-                    .font(.subheadline)
-                    .bold()
-                    .foregroundColor(.white)
-                    .padding(.horizontal, 10)
-                    .background(changeColor)
-                    .cornerRadius(5)
-                    .padding(.trailing)
+                .font(.subheadline)
+                .bold()
+                .foregroundColor(.white)
+                .padding(.horizontal, 10)
+                .background(changeColor)
+                .cornerRadius(5)
+                .padding(.trailing)
             }
         }
     }

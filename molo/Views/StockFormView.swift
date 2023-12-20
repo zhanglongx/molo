@@ -18,18 +18,18 @@ struct StockFormView: View {
 
             Section(header: Text("成本")) {
                 TextField("成本", text: $inputCost)
-                    .onAppear(
-                        perform: {
-                            inputCost = String(format: "%.2f", stock.cost ?? 0)
-                        }
-                    )
-                    .onReceive(Just(inputCost)) { newValue in
-                        if let cost = Double(newValue) {
-                            stock.cost = cost
-                        } else {
-                            inputCost = ""
-                        }
+                .onAppear(
+                    perform: {
+                        inputCost = String(format: "%.2f", stock.cost ?? 0)
                     }
+                )
+                .onReceive(Just(inputCost)) { newValue in
+                    if let cost = Double(newValue) {
+                        stock.cost = cost
+                    } else {
+                        inputCost = "0.00"
+                    }
+                }
             }
         }
     }
@@ -40,7 +40,7 @@ struct StockDetailView_Previews: PreviewProvider {
         @State var stock = Stock(symbol: "SH601231", name: "环旭电子", cost: 0.00) 
 
         StockDetailView(stock: $stock)
-            .environment(StockModel())
+        .environment(StockModel())
     }
 }
             
