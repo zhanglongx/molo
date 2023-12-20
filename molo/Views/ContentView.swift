@@ -47,12 +47,18 @@ struct ContentView: View {
                         .tint(.blue)
                     }
                 }
+                .onDelete(perform: delete)
             }
             .listStyle(PlainListStyle())
             .sheet(isPresented: $isPresented) {
                 StockDetailView(stock: $selectedStock)
             }
         }
+    }
+
+    private func delete(at offsets: IndexSet) {
+        let stock = model.stocks[offsets.first!]
+        model.del(stock)
     }
 }
 
