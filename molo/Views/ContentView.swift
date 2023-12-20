@@ -18,8 +18,8 @@ struct ContentView: View {
                 Spacer()
 
                 Button(action: {
-                    isPresented = true
                     selectedStock = EmptyStock()
+                    isPresented = true
                 }) {
                     Image(systemName: "plus")
                     .font(.title)
