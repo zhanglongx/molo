@@ -57,13 +57,15 @@ struct ContentView: View {
         let stock = model.stocks[offsets.first!]
         model.del(stock)
     }
+
     #if os(iOS)
     private var menuOniOS: some View {
         Menu {
             Button(action: {
-                // Add your action here
+                selectedStock = EmptyStock() 
+                isPresented = true
             }) {
-                Text("Add 1")
+                Label("添加股票", systemImage: "plus")
             }
             Button(action: {
                 // Add your action here
@@ -86,9 +88,10 @@ struct ContentView: View {
         }
         .contextMenu {
             Button(action: {
-                // Add your action here
+                selectedStock = EmptyStock()
+                isPresented = true
             }) {
-                Text("Add 1")
+                Label("添加股票", systemImage: "plus")
             }
             Button(action: {
                 // Add your action here

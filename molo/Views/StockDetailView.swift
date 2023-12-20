@@ -14,7 +14,6 @@ struct StockDetailView: View {
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     Text("编辑")
-                    .font(.title)
                     .bold()
                 }
 
@@ -28,7 +27,8 @@ struct StockDetailView: View {
 
                 ToolbarItem(placement: saveButtonPlacement) {
                     Button {
-                        model.update(stock)
+                        model.add(stock)
+                        presentationMode.wrappedValue.dismiss()
                     } label: {
                         Text("完成")
                     }
