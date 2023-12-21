@@ -3,6 +3,8 @@ import SwiftUI
 
 struct StockRowView: View {
     var stock: Stock
+
+    var isShowCost = false
     
     var body: some View {
         HStack {
@@ -23,34 +25,38 @@ struct StockRowView: View {
                 .bold()
                 .padding(.trailing)
 
-                Text(String(format: "%@", changeText))
+                Text(String(format: "%@", showText))
                 .font(.subheadline)
                 .bold()
                 .foregroundColor(.white)
                 .padding(.horizontal, 10)
-                .background(changeColor)
+                .background(showColor)
                 .cornerRadius(5)
                 .padding(.trailing)
             }
         }
     }
 
-    var changeText: String {
-        guard let change = stock.change else {
-            return ""
+    var showText: String {
+        let percent = isShowCost ? stock.costPercent : stock.change
+
+        guard let p = percent else {
+            return String(format: "%.2f%%", 0.00)
         }
 
-        let sign = change > 0 ? "+" : ""
+        let sign = p > 0 ? "+" : ""
 
-        return String(format: "%@%.2f%%", sign, change)
+        return String(format: "%@%.2f%%", sign, p)
     }
 
-    var changeColor: Color {
-        guard let change = stock.change else {
+    var showColor: Color {
+        let percent = isShowCost ? stock.costPercent : stock.change
+
+        guard let p = percent else {
             return .gray
         }
 
-        return change > 0 ? .red : change == 0 ? .gray : .green
+        return p > 0 ? .red : p == 0 ? .gray : .green
     }
 }
 

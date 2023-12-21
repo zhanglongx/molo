@@ -13,13 +13,10 @@ struct StockFormView: View {
         Form {
             Section(header: Text("基本信息")) {
                 // Lock the symbol field if the stock is not empty
-                if IsEmptyStock(stock) {
-                    TextField("名称", text: $stock.name)
-                    TextField("代码", text: $stock.symbol)
-                } else {
-                    Text(stock.name) 
-                    Text(stock.symbol)
-                }
+                TextField("名称", text: $stock.name)
+                .disabled(!IsEmptyStock(stock))
+                TextField("代码", text: $stock.symbol)
+                .disabled(!IsEmptyStock(stock))
             }
 
             Section(header: Text("成本")) {

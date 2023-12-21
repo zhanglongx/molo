@@ -23,22 +23,15 @@ struct ContentView: View {
             List {
                 ForEach(model.stocks, id: \.symbol) { stock in
                     StockRowView(stock: stock)
-                    .swipeActions() {
-                        Button() {
-                            model.del(stock)
-                        } label: {
-                            Image(systemName: "trash")
-                        }
-                        .tint(.red)
-
-                        Button() {
-                            selectedStock = stock
-                            isPresented = true
-                        } label: {
-                            Image(systemName: "pencil")
-                        }
-                        .tint(.blue)
+                    #if os(macOS)
+                    .contextMenu() {
+                        EditButton(stock)
                     }
+                    #else
+                    .swipeActions() {
+                        EditButton(stock)
+                    }
+                    #endif
                 }
                 .onDelete(perform: delete)
             }
@@ -94,6 +87,25 @@ struct ContentView: View {
             }
         }
     #endif
+    }
+
+    private func EditButton(_ stock: Stock) -> some View {
+        Group {
+            Button() {
+                model.del(stock)
+            } label: {
+                Image(systemName: "trash")
+            }
+            .tint(.red)
+
+            Button() {
+                selectedStock = stock
+                isPresented = true
+            } label: {
+                Image(systemName: "pencil")
+            }
+            .tint(.blue)
+        }
     }
 }
 

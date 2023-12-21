@@ -19,6 +19,7 @@
 		5E96BCFD2B17517900906BC7 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96BCFB2B17517900906BC7 /* DataSource.swift */; };
 		5E96BD012B17518D00906BC7 /* StockRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96BCFF2B17518D00906BC7 /* StockRowView.swift */; };
 		5E96BD022B17518D00906BC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96BD002B17518D00906BC7 /* ContentView.swift */; };
+		5EF6FF7D2B34597D0046607A /* StockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF6FF7C2B34597D0046607A /* StockController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		5E96BCFB2B17517900906BC7 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		5E96BCFF2B17518D00906BC7 /* StockRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockRowView.swift; sourceTree = "<group>"; };
 		5E96BD002B17518D00906BC7 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5EF6FF7C2B34597D0046607A /* StockController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		5E007F912B0CC5A900A5428F /* molo */ = {
 			isa = PBXGroup;
 			children = (
+				5EF6FF7B2B34597D0046607A /* Controller */,
 				5E96BCFE2B17518D00906BC7 /* Views */,
 				5E96BCF92B17517900906BC7 /* Model */,
 				5E007F922B0CC5A900A5428F /* moloApp.swift */,
@@ -158,6 +161,14 @@
 				5E96BD002B17518D00906BC7 /* ContentView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5EF6FF7B2B34597D0046607A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5EF6FF7C2B34597D0046607A /* StockController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EF6FF7D2B34597D0046607A /* StockController.swift in Sources */,
 				5E96BD012B17518D00906BC7 /* StockRowView.swift in Sources */,
 				5E7B8C542B31B92900E70405 /* StockFormView.swift in Sources */,
 				5E96BD022B17518D00906BC7 /* ContentView.swift in Sources */,
