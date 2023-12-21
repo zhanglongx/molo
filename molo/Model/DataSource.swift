@@ -11,7 +11,6 @@ struct XueqiuData: Decodable {
 }
 
 class DataSource {
-
     static let shared = DataSource()
 
     private func apiUrl(_ symbols: [Symbol]) -> URL {
