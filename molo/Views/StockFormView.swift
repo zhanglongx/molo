@@ -7,8 +7,6 @@ struct StockFormView: View {
 
     @Binding var stock: Stock
 
-    @State private var inputCost: String = "0.00"
-
     var body: some View {
         Form {
             Section(header: Text("基本信息")) {
@@ -28,7 +26,7 @@ struct StockFormView: View {
 
 struct StockDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        @State var stock = Stock(symbol: "SH601231", name: "环旭电子", cost: 0.00) 
+        @State var stock = Stock(symbol: "SH601231", name: "环旭电子") 
 
         StockDetailView(stock: $stock)
         .environment(StockModel())
