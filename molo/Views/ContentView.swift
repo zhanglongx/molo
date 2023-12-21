@@ -8,6 +8,8 @@ struct ContentView: View {
 
     @State private var selectedStock: Stock = NewEmptyStock()
 
+    @State private var isShowCost = false
+
     var body: some View {
         VStack {
             HStack{
@@ -17,19 +19,30 @@ struct ContentView: View {
 
                 Spacer()
 
-                popMenu
+                Toggle(isOn: $isShowCost) {
+                    Text("Cost")
+                 }
+                .padding()
+
+                Button {
+                    selectedStock = NewEmptyStock()
+                    isPresented = true
+                } label: {
+                    Image(systemName: "plus")
+                    .font(.title)
+                }
             }
 
             List {
                 ForEach(model.stocks, id: \.symbol) { stock in
-                    StockRowView(stock: stock)
+                    StockRowView(stock: stock, isShowCost: isShowCost)
                     #if os(macOS)
                     .contextMenu() {
-                        EditButton(stock)
+                        editButton(stock)
                     }
                     #else
                     .swipeActions() {
-                        EditButton(stock)
+                        editButton(stock)
                     }
                     #endif
                 }
@@ -47,49 +60,7 @@ struct ContentView: View {
         model.del(stock)
     }
 
-    private var popMenu: some View {
-    #if os(iOS)
-        Menu {
-            Button(action: {
-                selectedStock = NewEmptyStock() 
-                isPresented = true
-            }) {
-                Label("添加...", systemImage: "plus")
-            }
-
-            Button(action: {
-                // Add your action here
-            }) {
-                Text("Add 2")
-            }
-        } label: {
-            Image(systemName: "ellipsis.circle")
-                .font(.title)
-        }
-        .padding()
-    #elseif os(macOS)
-        Button(action: {}) {
-            Image(systemName: "ellipsis.circle")
-            .font(.title)
-        }
-        .contextMenu {
-            Button(action: {
-                selectedStock = NewEmptyStock()
-                isPresented = true
-            }) {
-                Label("添加...", systemImage: "plus")
-            }
-
-            Button(action: {
-                // Add your action here
-            }) {
-                Text("Add 2")
-            }
-        }
-    #endif
-    }
-
-    private func EditButton(_ stock: Stock) -> some View {
+    private func editButton(_ stock: Stock) -> some View {
         Group {
             Button() {
                 model.del(stock)
