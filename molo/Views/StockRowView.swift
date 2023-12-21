@@ -41,7 +41,7 @@ struct StockRowView: View {
         let percent = isShowCost ? stock.costPercent : stock.change
 
         guard let p = percent else {
-            return String(format: "n/a")
+            return String("n/a")
         }
 
         let sign = p > 0 ? "+" : ""
