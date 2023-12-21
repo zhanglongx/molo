@@ -31,6 +31,7 @@ struct StockDetailView: View {
                         presentationMode.wrappedValue.dismiss()
                     } label: {
                         Text("完成")
+                        .bold()
                     }
                 }
             }

@@ -2,11 +2,11 @@
 import SwiftUI
 
 struct ContentView: View {
-@Environment(StockModel.self) var model: StockModel
+    @Environment(StockModel.self) var model: StockModel
 
     @State private var isPresented = false
 
-    @State private var selectedStock: Stock = EmptyStock()
+    @State private var selectedStock: Stock = NewEmptyStock()
 
     var body: some View {
         VStack {
@@ -17,11 +17,7 @@ struct ContentView: View {
 
                 Spacer()
 
-                #if os(iOS)
-                menuOniOS
-                #elseif os(macOS)
-                menuOnmacOS 
-                #endif
+                popMenu
             }
 
             List {
@@ -58,15 +54,16 @@ struct ContentView: View {
         model.del(stock)
     }
 
+    private var popMenu: some View {
     #if os(iOS)
-    private var menuOniOS: some View {
         Menu {
             Button(action: {
-                selectedStock = EmptyStock() 
+                selectedStock = NewEmptyStock() 
                 isPresented = true
             }) {
-                Label("添加股票", systemImage: "plus")
+                Label("添加...", systemImage: "plus")
             }
+
             Button(action: {
                 // Add your action here
             }) {
@@ -77,30 +74,27 @@ struct ContentView: View {
                 .font(.title)
         }
         .padding()
-    }
-    #endif
-
-    #if os(macOS)
-    private var menuOnmacOS: some View {
+    #elseif os(macOS)
         Button(action: {}) {
             Image(systemName: "ellipsis.circle")
-                .font(.title)
+            .font(.title)
         }
         .contextMenu {
             Button(action: {
-                selectedStock = EmptyStock()
+                selectedStock = NewEmptyStock()
                 isPresented = true
             }) {
-                Label("添加股票", systemImage: "plus")
+                Label("添加...", systemImage: "plus")
             }
+
             Button(action: {
                 // Add your action here
             }) {
                 Text("Add 2")
             }
         }
-    }
     #endif
+    }
 }
 
 #Preview {
