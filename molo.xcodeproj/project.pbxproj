@@ -15,6 +15,7 @@
 		5E007FB12B0CC5AD00A5428F /* moloUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E007FB02B0CC5AD00A5428F /* moloUITestsLaunchTests.swift */; };
 		5E3DA33C2B29D31100EA47FB /* StockDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3DA33B2B29D31100EA47FB /* StockDetailView.swift */; };
 		5E7B8C542B31B92900E70405 /* StockFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7B8C532B31B92900E70405 /* StockFormView.swift */; };
+		5E9320D22B347605002D937C /* DecimalInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9320D12B347605002D937C /* DecimalInputView.swift */; };
 		5E96BCFC2B17517900906BC7 /* StockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96BCFA2B17517900906BC7 /* StockModel.swift */; };
 		5E96BCFD2B17517900906BC7 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96BCFB2B17517900906BC7 /* DataSource.swift */; };
 		5E96BD012B17518D00906BC7 /* StockRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96BCFF2B17518D00906BC7 /* StockRowView.swift */; };
@@ -52,6 +53,7 @@
 		5E007FB02B0CC5AD00A5428F /* moloUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moloUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5E3DA33B2B29D31100EA47FB /* StockDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockDetailView.swift; sourceTree = "<group>"; };
 		5E7B8C532B31B92900E70405 /* StockFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockFormView.swift; sourceTree = "<group>"; };
+		5E9320D12B347605002D937C /* DecimalInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecimalInputView.swift; sourceTree = "<group>"; };
 		5E96BCFA2B17517900906BC7 /* StockModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
 		5E96BCFB2B17517900906BC7 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		5E96BCFF2B17518D00906BC7 /* StockRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockRowView.swift; sourceTree = "<group>"; };
@@ -143,6 +145,14 @@
 			path = moloUITests;
 			sourceTree = "<group>";
 		};
+		5E9320D02B347605002D937C /* HelperView */ = {
+			isa = PBXGroup;
+			children = (
+				5E9320D12B347605002D937C /* DecimalInputView.swift */,
+			);
+			path = HelperView;
+			sourceTree = "<group>";
+		};
 		5E96BCF92B17517900906BC7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +165,7 @@
 		5E96BCFE2B17518D00906BC7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5E9320D02B347605002D937C /* HelperView */,
 				5E7B8C532B31B92900E70405 /* StockFormView.swift */,
 				5E3DA33B2B29D31100EA47FB /* StockDetailView.swift */,
 				5E96BCFF2B17518D00906BC7 /* StockRowView.swift */,
@@ -301,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E9320D22B347605002D937C /* DecimalInputView.swift in Sources */,
 				5EF6FF7D2B34597D0046607A /* StockController.swift in Sources */,
 				5E96BD012B17518D00906BC7 /* StockRowView.swift in Sources */,
 				5E7B8C542B31B92900E70405 /* StockFormView.swift in Sources */,

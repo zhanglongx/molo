@@ -20,19 +20,7 @@ struct StockFormView: View {
             }
 
             Section(header: Text("成本")) {
-                TextField("成本", text: $inputCost)
-                .onAppear(
-                    perform: {
-                        inputCost = String(format: "%.2f", stock.cost ?? 0)
-                    }
-                )
-                .onReceive(Just(inputCost)) { newValue in
-                    if let cost = Double(newValue) {
-                        stock.cost = cost
-                    } else {
-                        inputCost = "0.00"
-                    }
-                }
+                DecimalInputView(prompt: "成本", value: $stock.cost)
             }
         }
     }

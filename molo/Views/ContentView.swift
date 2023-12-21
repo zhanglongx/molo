@@ -19,10 +19,9 @@ struct ContentView: View {
 
                 Spacer()
 
-                Toggle(isOn: $isShowCost) {
-                    Text("Cost")
-                 }
-                .padding()
+                Text("Cost")
+                Toggle("", isOn: $isShowCost)
+                .labelsHidden()
 
                 Button {
                     selectedStock = NewEmptyStock()
@@ -31,6 +30,7 @@ struct ContentView: View {
                     Image(systemName: "plus")
                     .font(.title)
                 }
+                .padding()
             }
 
             List {
