@@ -67,7 +67,9 @@ struct ContentView: View {
             } label: {
                 Image(systemName: "trash")
             }
+            #if os(iOS)
             .tint(.red)
+            #endif
 
             Button() {
                 stockEditor.ExistEditor(stock)
@@ -75,7 +77,9 @@ struct ContentView: View {
             } label: {
                 Image(systemName: "pencil")
             }
+            #if os(iOS)
             .tint(.blue)
+            #endif
         }
     }
 }
