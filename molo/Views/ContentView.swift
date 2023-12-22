@@ -57,13 +57,13 @@ struct ContentView: View {
 
     private func delete(at offsets: IndexSet) {
         let stock = model.stocks[offsets.first!]
-        model.del(symbol: stock.symbol)
+        model.del(by: stock.symbol)
     }
 
     private func editButton(_ stock: Stock) -> some View {
         Group {
             Button() {
-                model.del(symbol: stock.symbol)
+                model.del(by: stock.symbol)
             } label: {
                 Image(systemName: "trash")
             }

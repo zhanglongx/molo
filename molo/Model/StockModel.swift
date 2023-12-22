@@ -50,7 +50,7 @@ class StockModel {
         stocks.map { $0.symbol }
     }
 
-    func add(symbol: Symbol, name: String, cost: Double? = nil) {
+    func add(by symbol: Symbol, name: String, cost: Double? = nil) {
         let stock = Stock(symbol: symbol, name: name, cost: cost)
 
         stocks.append(stock)
@@ -58,7 +58,7 @@ class StockModel {
         saveUserCost()
     }
 
-    func update(symbol: Symbol, cost: Double?) {
+    func update(by symbol: Symbol, cost: Double?) {
         if let i = stocks.firstIndex(where: { $0.symbol == symbol }) {
             stocks[i].cost = cost
         } else {
@@ -68,7 +68,7 @@ class StockModel {
         saveUserCost()
     }
 
-    func del(symbol: Symbol) {
+    func del(by symbol: Symbol) {
         stocks.removeAll { $0.symbol == symbol }
 
         saveUserCost()

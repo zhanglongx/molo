@@ -45,9 +45,9 @@ struct StockDetailView: View {
         let stock = stockEditor.stock
 
         if stockEditor.isCreate {
-            model.add(symbol: stock.symbol, name: stock.name, cost: stock.cost)
+            model.add(by: stock.symbol, name: stock.name, cost: stock.cost)
         } else {
-            model.update(symbol: stock.symbol, cost: stock.cost)
+            model.update(by: stock.symbol, cost: stock.cost)
         }
     }    
     
