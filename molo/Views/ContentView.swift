@@ -6,9 +6,9 @@ struct ContentView: View {
 
     @State private var isPresented = false
 
-    @State private var selectedStock: Stock = NewEmptyStock()
-
     @State private var isShowCost = false
+
+    @State private var stockEditor = StockEditor()
 
     var body: some View {
         VStack {
@@ -24,7 +24,7 @@ struct ContentView: View {
                 .labelsHidden()
 
                 Button {
-                    selectedStock = NewEmptyStock()
+                    stockEditor.NewEditor()
                     isPresented = true
                 } label: {
                     Image(systemName: "plus")
@@ -50,27 +50,27 @@ struct ContentView: View {
             }
             .listStyle(PlainListStyle())
             .sheet(isPresented: $isPresented) {
-                StockDetailView(stock: $selectedStock)
+                StockDetailView(stockEditor: $stockEditor)
             }
         }
     }
 
     private func delete(at offsets: IndexSet) {
         let stock = model.stocks[offsets.first!]
-        model.del(stock)
+        model.del(symbol: stock.symbol)
     }
 
     private func editButton(_ stock: Stock) -> some View {
         Group {
             Button() {
-                model.del(stock)
+                model.del(symbol: stock.symbol)
             } label: {
                 Image(systemName: "trash")
             }
             .tint(.red)
 
             Button() {
-                selectedStock = stock
+                stockEditor.ExistEditor(stock)
                 isPresented = true
             } label: {
                 Image(systemName: "pencil")

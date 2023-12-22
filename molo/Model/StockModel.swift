@@ -20,7 +20,6 @@ func IsEmptyStock(_ stock: Stock) -> Bool {
 
 @Observable
 class StockModel {
-
     // FIXME: race condition
     var stocks = [
         Stock(symbol: "SH601231", name: "环旭电子"),
@@ -51,38 +50,26 @@ class StockModel {
         stocks.map { $0.symbol }
     }
 
-    func add(_ stock: Stock) {
-        action(stock) { stock in
-            if stocks.contains(where: { $0.symbol == stock.symbol }) {
-                update(stock)
-            } else {
-                stocks.append(stock)
-            }
-        }
+    func add(symbol: Symbol, name: String, cost: Double? = nil) {
+        let stock = Stock(symbol: symbol, name: name, cost: cost)
+
+        stocks.append(stock)
+
+        saveUserCost()
     }
 
-    func update(_ stock: Stock) {
-        action(stock) { stock in
-            if let i = stocks.firstIndex(where: { $0.symbol == stock.symbol }) {
-                stocks[i] = stock
-            } else {
-                return
-            }
-        }
-    }
-
-    func del(_ stock: Stock) {
-        action(stock) { stock in
-            stocks.removeAll { $0.symbol == stock.symbol }
-        }
-    }
-
-    private func action (_ stock: Stock, _ action: (Stock) -> Void) {
-        if IsEmptyStock(stock) {
+    func update(symbol: Symbol, cost: Double?) {
+        if let i = stocks.firstIndex(where: { $0.symbol == symbol }) {
+            stocks[i].cost = cost
+        } else {
             return
         }
 
-        action(stock)
+        saveUserCost()
+    }
+
+    func del(symbol: Symbol) {
+        stocks.removeAll { $0.symbol == symbol }
 
         saveUserCost()
     }

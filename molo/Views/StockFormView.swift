@@ -5,20 +5,20 @@ import Combine
 struct StockFormView: View {
     @Environment(StockModel.self) var model: StockModel
 
-    @Binding var stock: Stock
+    @Binding var stockEditor: StockEditor
 
     var body: some View {
         Form {
             Section(header: Text("基本信息")) {
                 // Lock the symbol field if the stock is not empty
-                TextField("名称", text: $stock.name)
-                .disabled(!IsEmptyStock(stock))
-                TextField("代码", text: $stock.symbol)
-                .disabled(!IsEmptyStock(stock))
+                TextField("代码", text: $stockEditor.stock.symbol)
+                .disabled(!stockEditor.isCreate)
+                TextField("名称", text: $stockEditor.stock.name)
+                .disabled(!stockEditor.isCreate)
             }
 
             Section(header: Text("成本")) {
-                DecimalInputView(prompt: "成本", value: $stock.cost)
+                DecimalInputView(prompt: "成本", value: $stockEditor.stock.cost)
             }
         }
     }
@@ -26,9 +26,9 @@ struct StockFormView: View {
 
 struct StockDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        @State var stock = Stock(symbol: "SH601231", name: "环旭电子") 
+        @State var stockEditor = StockEditor()
 
-        StockDetailView(stock: $stock)
+        StockDetailView(stockEditor: $stockEditor)
         .environment(StockModel())
     }
 }

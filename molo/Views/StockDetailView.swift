@@ -6,11 +6,11 @@ struct StockDetailView: View {
 
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
-    @Binding var stock: Stock
+    @Binding var stockEditor: StockEditor
 
     var body: some View {
         NavigationStack {
-            StockFormView(stock: $stock)
+            StockFormView(stockEditor: $stockEditor)
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     Text("编辑")
@@ -27,7 +27,7 @@ struct StockDetailView: View {
 
                 ToolbarItem(placement: saveButtonPlacement) {
                     Button {
-                        model.add(stock)
+                        toSave()
                         presentationMode.wrappedValue.dismiss()
                     } label: {
                         Text("完成")
@@ -40,6 +40,16 @@ struct StockDetailView: View {
             #endif
         }
     }
+
+    private func toSave() {
+        let stock = stockEditor.stock
+
+        if stockEditor.isCreate {
+            model.add(symbol: stock.symbol, name: stock.name, cost: stock.cost)
+        } else {
+            model.update(symbol: stock.symbol, cost: stock.cost)
+        }
+    }    
     
     private var cancelButtonPlacement: ToolbarItemPlacement {
         #if os(macOS)
