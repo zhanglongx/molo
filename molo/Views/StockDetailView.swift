@@ -49,7 +49,9 @@ struct StockDetailView: View {
         } else {
             model.update(by: stock.symbol, cost: stock.cost)
         }
-    }    
+        
+        DataSource.shared.fetchData(model)
+    }
     
     private var cancelButtonPlacement: ToolbarItemPlacement {
         #if os(macOS)

@@ -34,7 +34,7 @@ struct ContentView: View {
             }
 
             List {
-                ForEach(model.stocks, id: \.symbol) { stock in
+                ForEach(sortedStocks(), id: \.symbol) { stock in
                     StockRowView(stock: stock, isShowCost: isShowCost)
                     #if os(macOS)
                     .contextMenu() {
@@ -80,6 +80,26 @@ struct ContentView: View {
             #if os(iOS)
             .tint(.blue)
             #endif
+        }
+    }
+
+    private func sortedStocks() -> [Stock] {
+        if isShowCost {
+            return model.stocks.sorted { 
+                if let cost0 = $0.costPercent, let cost1 = $1.costPercent {
+                    return cost0 > cost1
+                } else {
+                    return false
+                }
+            }
+        } else {
+            return model.stocks.sorted {
+                if let change0 = $0.change, let change1 = $1.change {
+                    return change0 > change1
+                } else {
+                    return false
+                }
+            }
         }
     }
 }
