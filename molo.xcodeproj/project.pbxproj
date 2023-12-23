@@ -7,76 +7,79 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E007F932B0CC5A900A5428F /* moloApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E007F922B0CC5A900A5428F /* moloApp.swift */; };
-		5E007F972B0CC5AC00A5428F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E007F962B0CC5AC00A5428F /* Assets.xcassets */; };
-		5E007F9A2B0CC5AC00A5428F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E007F992B0CC5AC00A5428F /* Preview Assets.xcassets */; };
-		5E007FA52B0CC5AD00A5428F /* moloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E007FA42B0CC5AD00A5428F /* moloTests.swift */; };
-		5E007FAF2B0CC5AD00A5428F /* moloUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E007FAE2B0CC5AD00A5428F /* moloUITests.swift */; };
-		5E007FB12B0CC5AD00A5428F /* moloUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E007FB02B0CC5AD00A5428F /* moloUITestsLaunchTests.swift */; };
-		5E3DA33C2B29D31100EA47FB /* StockDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3DA33B2B29D31100EA47FB /* StockDetailView.swift */; };
-		5E7B8C542B31B92900E70405 /* StockFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7B8C532B31B92900E70405 /* StockFormView.swift */; };
-		5E9320D22B347605002D937C /* DecimalInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9320D12B347605002D937C /* DecimalInputView.swift */; };
-		5E96BCFC2B17517900906BC7 /* StockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96BCFA2B17517900906BC7 /* StockModel.swift */; };
-		5E96BCFD2B17517900906BC7 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96BCFB2B17517900906BC7 /* DataSource.swift */; };
-		5E96BD012B17518D00906BC7 /* StockRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96BCFF2B17518D00906BC7 /* StockRowView.swift */; };
-		5E96BD022B17518D00906BC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96BD002B17518D00906BC7 /* ContentView.swift */; };
-		5EF6FF7D2B34597D0046607A /* StockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF6FF7C2B34597D0046607A /* StockController.swift */; };
+		5E3863AB2B367BD300C48635 /* moloApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3863AA2B367BD300C48635 /* moloApp.swift */; };
+		5E3863AF2B367BD400C48635 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E3863AE2B367BD400C48635 /* Assets.xcassets */; };
+		5E3863B22B367BD400C48635 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E3863B12B367BD400C48635 /* Preview Assets.xcassets */; };
+		5E3863BC2B367BD400C48635 /* moloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3863BB2B367BD400C48635 /* moloTests.swift */; };
+		5E3863C62B367BD400C48635 /* moloUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3863C52B367BD400C48635 /* moloUITests.swift */; };
+		5E3863C82B367BD400C48635 /* moloUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3863C72B367BD400C48635 /* moloUITestsLaunchTests.swift */; };
+		5E64344E2B36C4B000BE95B4 /* StockEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E64344D2B36C4B000BE95B4 /* StockEditor.swift */; };
+		5E6434532B36C4BE00BE95B4 /* StockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6434502B36C4BE00BE95B4 /* StockModel.swift */; };
+		5E6434542B36C4BE00BE95B4 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6434512B36C4BE00BE95B4 /* DataSource.swift */; };
+		5E6434552B36C4BE00BE95B4 /* StockExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6434522B36C4BE00BE95B4 /* StockExtension.swift */; };
+		5E64345D2B36C4C800BE95B4 /* StockFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6434572B36C4C800BE95B4 /* StockFormView.swift */; };
+		5E64345E2B36C4C800BE95B4 /* DecimalInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6434592B36C4C800BE95B4 /* DecimalInputView.swift */; };
+		5E64345F2B36C4C800BE95B4 /* StockRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E64345A2B36C4C800BE95B4 /* StockRowView.swift */; };
+		5E6434602B36C4C800BE95B4 /* StockDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E64345B2B36C4C800BE95B4 /* StockDetailView.swift */; };
+		5E6434612B36C4C800BE95B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E64345C2B36C4C800BE95B4 /* ContentView.swift */; };
+		5E6434642B36C4F000BE95B4 /* DataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6434632B36C4F000BE95B4 /* DataSourceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5E007FA12B0CC5AD00A5428F /* PBXContainerItemProxy */ = {
+		5E3863B82B367BD400C48635 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5E007F872B0CC5A800A5428F /* Project object */;
+			containerPortal = 5E38639F2B367BD300C48635 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5E007F8E2B0CC5A900A5428F;
+			remoteGlobalIDString = 5E3863A62B367BD300C48635;
 			remoteInfo = molo;
 		};
-		5E007FAB2B0CC5AD00A5428F /* PBXContainerItemProxy */ = {
+		5E3863C22B367BD400C48635 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5E007F872B0CC5A800A5428F /* Project object */;
+			containerPortal = 5E38639F2B367BD300C48635 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5E007F8E2B0CC5A900A5428F;
+			remoteGlobalIDString = 5E3863A62B367BD300C48635;
 			remoteInfo = molo;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5E007F8F2B0CC5A900A5428F /* molo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = molo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E007F922B0CC5A900A5428F /* moloApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moloApp.swift; sourceTree = "<group>"; };
-		5E007F962B0CC5AC00A5428F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5E007F992B0CC5AC00A5428F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		5E007F9B2B0CC5AC00A5428F /* molo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = molo.entitlements; sourceTree = "<group>"; };
-		5E007FA02B0CC5AD00A5428F /* moloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = moloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E007FA42B0CC5AD00A5428F /* moloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moloTests.swift; sourceTree = "<group>"; };
-		5E007FAA2B0CC5AD00A5428F /* moloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = moloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E007FAE2B0CC5AD00A5428F /* moloUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moloUITests.swift; sourceTree = "<group>"; };
-		5E007FB02B0CC5AD00A5428F /* moloUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moloUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		5E3DA33B2B29D31100EA47FB /* StockDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockDetailView.swift; sourceTree = "<group>"; };
-		5E7B8C532B31B92900E70405 /* StockFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockFormView.swift; sourceTree = "<group>"; };
-		5E9320D12B347605002D937C /* DecimalInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecimalInputView.swift; sourceTree = "<group>"; };
-		5E96BCFA2B17517900906BC7 /* StockModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
-		5E96BCFB2B17517900906BC7 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
-		5E96BCFF2B17518D00906BC7 /* StockRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockRowView.swift; sourceTree = "<group>"; };
-		5E96BD002B17518D00906BC7 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		5EF6FF7C2B34597D0046607A /* StockController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockController.swift; sourceTree = "<group>"; };
+		5E3863A72B367BD300C48635 /* molo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = molo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E3863AA2B367BD300C48635 /* moloApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moloApp.swift; sourceTree = "<group>"; };
+		5E3863AE2B367BD400C48635 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5E3863B12B367BD400C48635 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5E3863B72B367BD400C48635 /* moloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = moloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E3863BB2B367BD400C48635 /* moloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moloTests.swift; sourceTree = "<group>"; };
+		5E3863C12B367BD400C48635 /* moloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = moloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E3863C52B367BD400C48635 /* moloUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moloUITests.swift; sourceTree = "<group>"; };
+		5E3863C72B367BD400C48635 /* moloUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moloUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5E64344D2B36C4B000BE95B4 /* StockEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockEditor.swift; sourceTree = "<group>"; };
+		5E6434502B36C4BE00BE95B4 /* StockModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
+		5E6434512B36C4BE00BE95B4 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		5E6434522B36C4BE00BE95B4 /* StockExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockExtension.swift; sourceTree = "<group>"; };
+		5E6434572B36C4C800BE95B4 /* StockFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockFormView.swift; sourceTree = "<group>"; };
+		5E6434592B36C4C800BE95B4 /* DecimalInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecimalInputView.swift; sourceTree = "<group>"; };
+		5E64345A2B36C4C800BE95B4 /* StockRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockRowView.swift; sourceTree = "<group>"; };
+		5E64345B2B36C4C800BE95B4 /* StockDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockDetailView.swift; sourceTree = "<group>"; };
+		5E64345C2B36C4C800BE95B4 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5E6434632B36C4F000BE95B4 /* DataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5E007F8C2B0CC5A900A5428F /* Frameworks */ = {
+		5E3863A42B367BD300C48635 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5E007F9D2B0CC5AD00A5428F /* Frameworks */ = {
+		5E3863B42B367BD400C48635 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5E007FA72B0CC5AD00A5428F /* Frameworks */ = {
+		5E3863BE2B367BD400C48635 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -86,112 +89,121 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5E007F862B0CC5A800A5428F = {
+		5E38639E2B367BD300C48635 = {
 			isa = PBXGroup;
 			children = (
-				5E007F912B0CC5A900A5428F /* molo */,
-				5E007FA32B0CC5AD00A5428F /* moloTests */,
-				5E007FAD2B0CC5AD00A5428F /* moloUITests */,
-				5E007F902B0CC5A900A5428F /* Products */,
+				5E3863A92B367BD300C48635 /* molo */,
+				5E3863BA2B367BD400C48635 /* moloTests */,
+				5E3863C42B367BD400C48635 /* moloUITests */,
+				5E3863A82B367BD300C48635 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		5E007F902B0CC5A900A5428F /* Products */ = {
+		5E3863A82B367BD300C48635 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5E007F8F2B0CC5A900A5428F /* molo.app */,
-				5E007FA02B0CC5AD00A5428F /* moloTests.xctest */,
-				5E007FAA2B0CC5AD00A5428F /* moloUITests.xctest */,
+				5E3863A72B367BD300C48635 /* molo.app */,
+				5E3863B72B367BD400C48635 /* moloTests.xctest */,
+				5E3863C12B367BD400C48635 /* moloUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5E007F912B0CC5A900A5428F /* molo */ = {
+		5E3863A92B367BD300C48635 /* molo */ = {
 			isa = PBXGroup;
 			children = (
-				5EF6FF7B2B34597D0046607A /* Controller */,
-				5E96BCFE2B17518D00906BC7 /* Views */,
-				5E96BCF92B17517900906BC7 /* Model */,
-				5E007F922B0CC5A900A5428F /* moloApp.swift */,
-				5E007F962B0CC5AC00A5428F /* Assets.xcassets */,
-				5E007F9B2B0CC5AC00A5428F /* molo.entitlements */,
-				5E007F982B0CC5AC00A5428F /* Preview Content */,
+				5E3863AA2B367BD300C48635 /* moloApp.swift */,
+				5E6434562B36C4C800BE95B4 /* Views */,
+				5E64344F2B36C4BE00BE95B4 /* Model */,
+				5E64344C2B36C4B000BE95B4 /* Controller */,
+				5E3863AE2B367BD400C48635 /* Assets.xcassets */,
+				5E3863B02B367BD400C48635 /* Preview Content */,
 			);
 			path = molo;
 			sourceTree = "<group>";
 		};
-		5E007F982B0CC5AC00A5428F /* Preview Content */ = {
+		5E3863B02B367BD400C48635 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				5E007F992B0CC5AC00A5428F /* Preview Assets.xcassets */,
+				5E3863B12B367BD400C48635 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		5E007FA32B0CC5AD00A5428F /* moloTests */ = {
+		5E3863BA2B367BD400C48635 /* moloTests */ = {
 			isa = PBXGroup;
 			children = (
-				5E007FA42B0CC5AD00A5428F /* moloTests.swift */,
+				5E6434622B36C4F000BE95B4 /* Model */,
+				5E3863BB2B367BD400C48635 /* moloTests.swift */,
 			);
 			path = moloTests;
 			sourceTree = "<group>";
 		};
-		5E007FAD2B0CC5AD00A5428F /* moloUITests */ = {
+		5E3863C42B367BD400C48635 /* moloUITests */ = {
 			isa = PBXGroup;
 			children = (
-				5E007FAE2B0CC5AD00A5428F /* moloUITests.swift */,
-				5E007FB02B0CC5AD00A5428F /* moloUITestsLaunchTests.swift */,
+				5E3863C52B367BD400C48635 /* moloUITests.swift */,
+				5E3863C72B367BD400C48635 /* moloUITestsLaunchTests.swift */,
 			);
 			path = moloUITests;
 			sourceTree = "<group>";
 		};
-		5E9320D02B347605002D937C /* HelperView */ = {
+		5E64344C2B36C4B000BE95B4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				5E9320D12B347605002D937C /* DecimalInputView.swift */,
+				5E64344D2B36C4B000BE95B4 /* StockEditor.swift */,
 			);
-			path = HelperView;
+			path = Controller;
 			sourceTree = "<group>";
 		};
-		5E96BCF92B17517900906BC7 /* Model */ = {
+		5E64344F2B36C4BE00BE95B4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5E96BCFA2B17517900906BC7 /* StockModel.swift */,
-				5E96BCFB2B17517900906BC7 /* DataSource.swift */,
+				5E6434502B36C4BE00BE95B4 /* StockModel.swift */,
+				5E6434512B36C4BE00BE95B4 /* DataSource.swift */,
+				5E6434522B36C4BE00BE95B4 /* StockExtension.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		5E96BCFE2B17518D00906BC7 /* Views */ = {
+		5E6434562B36C4C800BE95B4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5E9320D02B347605002D937C /* HelperView */,
-				5E7B8C532B31B92900E70405 /* StockFormView.swift */,
-				5E3DA33B2B29D31100EA47FB /* StockDetailView.swift */,
-				5E96BCFF2B17518D00906BC7 /* StockRowView.swift */,
-				5E96BD002B17518D00906BC7 /* ContentView.swift */,
+				5E6434582B36C4C800BE95B4 /* HelperView */,
+				5E6434572B36C4C800BE95B4 /* StockFormView.swift */,
+				5E64345A2B36C4C800BE95B4 /* StockRowView.swift */,
+				5E64345B2B36C4C800BE95B4 /* StockDetailView.swift */,
+				5E64345C2B36C4C800BE95B4 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		5EF6FF7B2B34597D0046607A /* Controller */ = {
+		5E6434582B36C4C800BE95B4 /* HelperView */ = {
 			isa = PBXGroup;
 			children = (
-				5EF6FF7C2B34597D0046607A /* StockController.swift */,
+				5E6434592B36C4C800BE95B4 /* DecimalInputView.swift */,
 			);
-			path = Controller;
+			path = HelperView;
+			sourceTree = "<group>";
+		};
+		5E6434622B36C4F000BE95B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5E6434632B36C4F000BE95B4 /* DataSourceTests.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5E007F8E2B0CC5A900A5428F /* molo */ = {
+		5E3863A62B367BD300C48635 /* molo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5E007FB42B0CC5AD00A5428F /* Build configuration list for PBXNativeTarget "molo" */;
+			buildConfigurationList = 5E3863CB2B367BD400C48635 /* Build configuration list for PBXNativeTarget "molo" */;
 			buildPhases = (
-				5E007F8B2B0CC5A900A5428F /* Sources */,
-				5E007F8C2B0CC5A900A5428F /* Frameworks */,
-				5E007F8D2B0CC5A900A5428F /* Resources */,
+				5E3863A32B367BD300C48635 /* Sources */,
+				5E3863A42B367BD300C48635 /* Frameworks */,
+				5E3863A52B367BD300C48635 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -199,69 +211,69 @@
 			);
 			name = molo;
 			productName = molo;
-			productReference = 5E007F8F2B0CC5A900A5428F /* molo.app */;
+			productReference = 5E3863A72B367BD300C48635 /* molo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5E007F9F2B0CC5AD00A5428F /* moloTests */ = {
+		5E3863B62B367BD400C48635 /* moloTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5E007FB72B0CC5AD00A5428F /* Build configuration list for PBXNativeTarget "moloTests" */;
+			buildConfigurationList = 5E3863CE2B367BD400C48635 /* Build configuration list for PBXNativeTarget "moloTests" */;
 			buildPhases = (
-				5E007F9C2B0CC5AD00A5428F /* Sources */,
-				5E007F9D2B0CC5AD00A5428F /* Frameworks */,
-				5E007F9E2B0CC5AD00A5428F /* Resources */,
+				5E3863B32B367BD400C48635 /* Sources */,
+				5E3863B42B367BD400C48635 /* Frameworks */,
+				5E3863B52B367BD400C48635 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5E007FA22B0CC5AD00A5428F /* PBXTargetDependency */,
+				5E3863B92B367BD400C48635 /* PBXTargetDependency */,
 			);
 			name = moloTests;
 			productName = moloTests;
-			productReference = 5E007FA02B0CC5AD00A5428F /* moloTests.xctest */;
+			productReference = 5E3863B72B367BD400C48635 /* moloTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		5E007FA92B0CC5AD00A5428F /* moloUITests */ = {
+		5E3863C02B367BD400C48635 /* moloUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5E007FBA2B0CC5AD00A5428F /* Build configuration list for PBXNativeTarget "moloUITests" */;
+			buildConfigurationList = 5E3863D12B367BD400C48635 /* Build configuration list for PBXNativeTarget "moloUITests" */;
 			buildPhases = (
-				5E007FA62B0CC5AD00A5428F /* Sources */,
-				5E007FA72B0CC5AD00A5428F /* Frameworks */,
-				5E007FA82B0CC5AD00A5428F /* Resources */,
+				5E3863BD2B367BD400C48635 /* Sources */,
+				5E3863BE2B367BD400C48635 /* Frameworks */,
+				5E3863BF2B367BD400C48635 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5E007FAC2B0CC5AD00A5428F /* PBXTargetDependency */,
+				5E3863C32B367BD400C48635 /* PBXTargetDependency */,
 			);
 			name = moloUITests;
 			productName = moloUITests;
-			productReference = 5E007FAA2B0CC5AD00A5428F /* moloUITests.xctest */;
+			productReference = 5E3863C12B367BD400C48635 /* moloUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5E007F872B0CC5A800A5428F /* Project object */ = {
+		5E38639F2B367BD300C48635 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
-					5E007F8E2B0CC5A900A5428F = {
-						CreatedOnToolsVersion = 15.0.1;
+					5E3863A62B367BD300C48635 = {
+						CreatedOnToolsVersion = 15.1;
 					};
-					5E007F9F2B0CC5AD00A5428F = {
-						CreatedOnToolsVersion = 15.0.1;
-						TestTargetID = 5E007F8E2B0CC5A900A5428F;
+					5E3863B62B367BD400C48635 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 5E3863A62B367BD300C48635;
 					};
-					5E007FA92B0CC5AD00A5428F = {
-						CreatedOnToolsVersion = 15.0.1;
-						TestTargetID = 5E007F8E2B0CC5A900A5428F;
+					5E3863C02B367BD400C48635 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 5E3863A62B367BD300C48635;
 					};
 				};
 			};
-			buildConfigurationList = 5E007F8A2B0CC5A900A5428F /* Build configuration list for PBXProject "molo" */;
+			buildConfigurationList = 5E3863A22B367BD300C48635 /* Build configuration list for PBXProject "molo" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -269,36 +281,36 @@
 				en,
 				Base,
 			);
-			mainGroup = 5E007F862B0CC5A800A5428F;
-			productRefGroup = 5E007F902B0CC5A900A5428F /* Products */;
+			mainGroup = 5E38639E2B367BD300C48635;
+			productRefGroup = 5E3863A82B367BD300C48635 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5E007F8E2B0CC5A900A5428F /* molo */,
-				5E007F9F2B0CC5AD00A5428F /* moloTests */,
-				5E007FA92B0CC5AD00A5428F /* moloUITests */,
+				5E3863A62B367BD300C48635 /* molo */,
+				5E3863B62B367BD400C48635 /* moloTests */,
+				5E3863C02B367BD400C48635 /* moloUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5E007F8D2B0CC5A900A5428F /* Resources */ = {
+		5E3863A52B367BD300C48635 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E007F9A2B0CC5AC00A5428F /* Preview Assets.xcassets in Resources */,
-				5E007F972B0CC5AC00A5428F /* Assets.xcassets in Resources */,
+				5E3863B22B367BD400C48635 /* Preview Assets.xcassets in Resources */,
+				5E3863AF2B367BD400C48635 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5E007F9E2B0CC5AD00A5428F /* Resources */ = {
+		5E3863B52B367BD400C48635 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5E007FA82B0CC5AD00A5428F /* Resources */ = {
+		5E3863BF2B367BD400C48635 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -308,56 +320,58 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5E007F8B2B0CC5A900A5428F /* Sources */ = {
+		5E3863A32B367BD300C48635 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E9320D22B347605002D937C /* DecimalInputView.swift in Sources */,
-				5EF6FF7D2B34597D0046607A /* StockController.swift in Sources */,
-				5E96BD012B17518D00906BC7 /* StockRowView.swift in Sources */,
-				5E7B8C542B31B92900E70405 /* StockFormView.swift in Sources */,
-				5E96BD022B17518D00906BC7 /* ContentView.swift in Sources */,
-				5E007F932B0CC5A900A5428F /* moloApp.swift in Sources */,
-				5E96BCFD2B17517900906BC7 /* DataSource.swift in Sources */,
-				5E3DA33C2B29D31100EA47FB /* StockDetailView.swift in Sources */,
-				5E96BCFC2B17517900906BC7 /* StockModel.swift in Sources */,
+				5E3863AB2B367BD300C48635 /* moloApp.swift in Sources */,
+				5E64344E2B36C4B000BE95B4 /* StockEditor.swift in Sources */,
+				5E6434542B36C4BE00BE95B4 /* DataSource.swift in Sources */,
+				5E6434552B36C4BE00BE95B4 /* StockExtension.swift in Sources */,
+				5E64345F2B36C4C800BE95B4 /* StockRowView.swift in Sources */,
+				5E64345E2B36C4C800BE95B4 /* DecimalInputView.swift in Sources */,
+				5E6434612B36C4C800BE95B4 /* ContentView.swift in Sources */,
+				5E6434532B36C4BE00BE95B4 /* StockModel.swift in Sources */,
+				5E6434602B36C4C800BE95B4 /* StockDetailView.swift in Sources */,
+				5E64345D2B36C4C800BE95B4 /* StockFormView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5E007F9C2B0CC5AD00A5428F /* Sources */ = {
+		5E3863B32B367BD400C48635 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E007FA52B0CC5AD00A5428F /* moloTests.swift in Sources */,
+				5E6434642B36C4F000BE95B4 /* DataSourceTests.swift in Sources */,
+				5E3863BC2B367BD400C48635 /* moloTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5E007FA62B0CC5AD00A5428F /* Sources */ = {
+		5E3863BD2B367BD400C48635 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E007FAF2B0CC5AD00A5428F /* moloUITests.swift in Sources */,
-				5E007FB12B0CC5AD00A5428F /* moloUITestsLaunchTests.swift in Sources */,
+				5E3863C62B367BD400C48635 /* moloUITests.swift in Sources */,
+				5E3863C82B367BD400C48635 /* moloUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5E007FA22B0CC5AD00A5428F /* PBXTargetDependency */ = {
+		5E3863B92B367BD400C48635 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5E007F8E2B0CC5A900A5428F /* molo */;
-			targetProxy = 5E007FA12B0CC5AD00A5428F /* PBXContainerItemProxy */;
+			target = 5E3863A62B367BD300C48635 /* molo */;
+			targetProxy = 5E3863B82B367BD400C48635 /* PBXContainerItemProxy */;
 		};
-		5E007FAC2B0CC5AD00A5428F /* PBXTargetDependency */ = {
+		5E3863C32B367BD400C48635 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5E007F8E2B0CC5A900A5428F /* molo */;
-			targetProxy = 5E007FAB2B0CC5AD00A5428F /* PBXContainerItemProxy */;
+			target = 5E3863A62B367BD300C48635 /* molo */;
+			targetProxy = 5E3863C22B367BD400C48635 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		5E007FB22B0CC5AD00A5428F /* Debug */ = {
+		5E3863C92B367BD400C48635 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -409,18 +423,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		5E007FB32B0CC5AD00A5428F /* Release */ = {
+		5E3863CA2B367BD400C48635 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -466,74 +480,79 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		5E007FB52B0CC5AD00A5428F /* Debug */ = {
+		5E3863CC2B367BD400C48635 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = molo/molo.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"molo/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = gemini67.molo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		5E007FB62B0CC5AD00A5428F /* Release */ = {
+		5E3863CD2B367BD400C48635 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = molo/molo.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"molo/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = gemini67.molo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
-		5E007FB82B0CC5AD00A5428F /* Debug */ = {
+		5E3863CF2B367BD400C48635 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -541,17 +560,18 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = gemini67.moloTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/molo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/molo";
 			};
 			name = Debug;
 		};
-		5E007FB92B0CC5AD00A5428F /* Release */ = {
+		5E3863D02B367BD400C48635 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -559,17 +579,18 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = gemini67.moloTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/molo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/molo";
 			};
 			name = Release;
 		};
-		5E007FBB2B0CC5AD00A5428F /* Debug */ = {
+		5E3863D22B367BD400C48635 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -581,11 +602,12 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = molo;
 			};
 			name = Debug;
 		};
-		5E007FBC2B0CC5AD00A5428F /* Release */ = {
+		5E3863D32B367BD400C48635 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -597,6 +619,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = molo;
 			};
 			name = Release;
@@ -604,43 +627,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5E007F8A2B0CC5A900A5428F /* Build configuration list for PBXProject "molo" */ = {
+		5E3863A22B367BD300C48635 /* Build configuration list for PBXProject "molo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5E007FB22B0CC5AD00A5428F /* Debug */,
-				5E007FB32B0CC5AD00A5428F /* Release */,
+				5E3863C92B367BD400C48635 /* Debug */,
+				5E3863CA2B367BD400C48635 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5E007FB42B0CC5AD00A5428F /* Build configuration list for PBXNativeTarget "molo" */ = {
+		5E3863CB2B367BD400C48635 /* Build configuration list for PBXNativeTarget "molo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5E007FB52B0CC5AD00A5428F /* Debug */,
-				5E007FB62B0CC5AD00A5428F /* Release */,
+				5E3863CC2B367BD400C48635 /* Debug */,
+				5E3863CD2B367BD400C48635 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5E007FB72B0CC5AD00A5428F /* Build configuration list for PBXNativeTarget "moloTests" */ = {
+		5E3863CE2B367BD400C48635 /* Build configuration list for PBXNativeTarget "moloTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5E007FB82B0CC5AD00A5428F /* Debug */,
-				5E007FB92B0CC5AD00A5428F /* Release */,
+				5E3863CF2B367BD400C48635 /* Debug */,
+				5E3863D02B367BD400C48635 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5E007FBA2B0CC5AD00A5428F /* Build configuration list for PBXNativeTarget "moloUITests" */ = {
+		5E3863D12B367BD400C48635 /* Build configuration list for PBXNativeTarget "moloUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5E007FBB2B0CC5AD00A5428F /* Debug */,
-				5E007FBC2B0CC5AD00A5428F /* Release */,
+				5E3863D22B367BD400C48635 /* Debug */,
+				5E3863D32B367BD400C48635 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5E007F872B0CC5A800A5428F /* Project object */;
+	rootObject = 5E38639F2B367BD300C48635 /* Project object */;
 }
