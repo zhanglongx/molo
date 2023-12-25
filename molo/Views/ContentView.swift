@@ -4,9 +4,9 @@ import SwiftUI
 struct ContentView: View {
     @Environment(StockModel.self) var model: StockModel
 
-    @State private var isPresented = false
-
     @State private var isShowCost = false
+
+    @State private var isPresented = false
 
     @State private var stockEditor = StockEditor()
 
@@ -34,7 +34,7 @@ struct ContentView: View {
             }
 
             List {
-                ForEach(sortedStocks(), id: \.symbol) { stock in
+                ForEach(sortedStocks, id: \.symbol) { stock in
                     StockRowView(stock: stock, isShowCost: isShowCost)
                     #if os(macOS)
                     .contextMenu() {
@@ -83,7 +83,7 @@ struct ContentView: View {
         }
     }
 
-    private func sortedStocks() -> [Stock] {
+    private var sortedStocks: [Stock] {
         if isShowCost {
             return model.stocks.sorted { 
                 if let cost0 = $0.costPercent, let cost1 = $1.costPercent {

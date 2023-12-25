@@ -46,11 +46,11 @@ struct StockDetailView: View {
 
         if stockEditor.isCreate {
             model.add(by: stock.symbol, name: stock.name, cost: stock.cost)
+
+            DataSource.shared.fetchData(model)
         } else {
             model.update(by: stock.symbol, cost: stock.cost)
         }
-        
-        DataSource.shared.fetchData(model)
     }
     
     private var cancelButtonPlacement: ToolbarItemPlacement {
