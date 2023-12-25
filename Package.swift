@@ -16,7 +16,7 @@ let package = Package(
         .target(
             name: "molo",
             path: "molo",
-            resources: [.process("Assets.xcassets"), .process("molo.entitlements")]),
+            resources: [.process("Assets.xcassets"), .process("Preview Content")]),
         .testTarget(
             name: "moloTests",
             dependencies: ["molo"],
