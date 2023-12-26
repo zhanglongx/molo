@@ -84,6 +84,7 @@ struct ContentView: View {
     }
 
     private var sortedStocks: [Stock] {
+        // FIXME: by symbol?
         if isShowCost {
             return model.stocks.sorted { 
                 if let cost0 = $0.costPercent, let cost1 = $1.costPercent {
