@@ -38,11 +38,11 @@ struct ContentView: View {
                     StockRowView(stock: stock, isShowCost: isShowCost)
                     #if os(macOS)
                     .contextMenu() {
-                        editButton(stock)
+                        rowActions(stock)
                     }
                     #else
                     .swipeActions() {
-                        editButton(stock)
+                        rowActions(stock)
                     }
                     #endif
                 }
@@ -60,7 +60,7 @@ struct ContentView: View {
         model.del(by: stock.symbol)
     }
 
-    private func editButton(_ stock: Stock) -> some View {
+    private func rowActions(_ stock: Stock) -> some View {
         Group {
             Button() {
                 model.del(by: stock.symbol)
