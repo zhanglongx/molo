@@ -8,7 +8,7 @@ protocol TokenStore {
 }
 
 final class KeychainTokenStore: TokenStore {
-    private let service = "AShareAnalyzer.TuShare"
+    private let service = "Molo.TuShare"
     private let account = "tushare_token"
 
     func readToken() -> String? {

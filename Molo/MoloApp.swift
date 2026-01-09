@@ -2,7 +2,7 @@ import SwiftUI
 import SwiftData
 
 @main
-struct AShareAnalyzerApp: App {
+struct MoloApp: App {
     private let container: ModelContainer = {
         let schema = Schema([
             WatchlistItem.self,
