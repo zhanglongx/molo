@@ -8,7 +8,10 @@ struct MoloApp: App {
             WatchlistItem.self,
             CachedMetricPoint.self
         ])
-        let config = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
+        let config = ModelConfiguration(schema: schema,
+                                                            isStoredInMemoryOnly: false,
+                                                            cloudKitDatabase: .automatic
+        )
         return try! ModelContainer(for: schema, configurations: [config])
     }()
 
