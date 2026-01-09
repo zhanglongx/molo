@@ -1,2 +1,2 @@
 # molo
-molo is an A-share chat plot app.
+molo is an A-share chart plot app.
