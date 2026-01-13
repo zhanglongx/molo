@@ -1,4 +1,5 @@
 import Foundation
+import Combine
 
 struct StockBasic: Identifiable, Hashable {
     let tsCode: String

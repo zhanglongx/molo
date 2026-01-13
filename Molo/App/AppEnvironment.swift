@@ -1,12 +1,13 @@
 import Foundation
 import SwiftUI
+import Combine
 
 @MainActor
 final class AppEnvironment: ObservableObject {
-    let tokenStore: TokenStore
-    let tushare: TushareClient
-    let stockCatalog: StockCatalogService
-    let repository: FinancialRepository
+    @Published var tokenStore: TokenStore
+    @Published var tushare: TushareClient
+    @Published var stockCatalog: StockCatalogService
+    @Published var repository: FinancialRepository
 
     init() {
         self.tokenStore = KeychainTokenStore()
