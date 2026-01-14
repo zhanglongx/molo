@@ -1,5 +1,9 @@
-// swift-tools-version:5.9
+// swift-tools-version:6.2
 import PackageDescription
+
+let concurrencySettings: [SwiftSetting] = [
+    .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
+]
 
 let package = Package(
     name: "MoloApp",
@@ -23,7 +27,8 @@ let package = Package(
         .target(
             name: "MoloApp",
             dependencies: [],
-            path: "Molo"
+            path: "Molo",
+            swiftSettings: concurrencySettings
         ),
     ]
 )

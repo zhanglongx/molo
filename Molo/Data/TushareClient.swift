@@ -17,7 +17,7 @@ enum TushareError: Error, LocalizedError {
     }
 }
 
-final class TushareClient {
+final class TushareClient: @unchecked Sendable {
     private let baseURL: URL
     private let session: URLSession
 
