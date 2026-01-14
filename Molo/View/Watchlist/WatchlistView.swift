@@ -7,6 +7,7 @@ struct WatchlistView: View {
 
     @Binding var selection: WatchlistItem?
     let onAdd: () -> Void
+    let onSettings: () -> Void
 
     @State private var searchText: String = ""
 
@@ -44,11 +45,22 @@ struct WatchlistView: View {
         .navigationTitle("自选")
         .searchable(text: $searchText, placement: .sidebar)
         .toolbar {
+            #if os(iOS)
+            ToolbarItemGroup(placement: .topBarTrailing) {
+                Button(action: onAdd) {
+                    Label("添加", systemImage: "plus")
+                }
+                Button(action: onSettings) {
+                    Label("设置", systemImage: "gear")
+                }
+            }
+            #else
             ToolbarItem(placement: .primaryAction) {
                 Button(action: onAdd) {
                     Label("添加", systemImage: "plus")
                 }
             }
+            #endif
         }
     }
 }

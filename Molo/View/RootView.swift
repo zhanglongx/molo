@@ -12,35 +12,27 @@ struct RootView: View {
 
     var body: some View {
         NavigationSplitView {
-            WatchlistView(selection: $selection, onAdd: { showAddSheet = true })
+            WatchlistView(selection: $selection,
+                          onAdd: { showAddSheet = true },
+                          onSettings: { showSettings = true }
+            )
         } detail: {
-            if let item = selection {
-                StockDetailView(item: item, reportDimension: $reportDimension)
-            } else {
-                ContentUnavailableView("选择一家公司", systemImage: "chart.line.uptrend.xyaxis")
+            Group {
+                if let item = selection {
+                    StockDetailView(item: item, reportDimension: $reportDimension)
+                } else {
+                    ContentUnavailableView("选择一家公司", systemImage: "chart.line.uptrend.xyaxis")
+                }
             }
-        }
-        .toolbar {
-            ToolbarItemGroup(placement: .automatic) {
-                Picker("报表", selection: $reportDimension) {
-                    Text("年报").tag(ReportDimension.annual)
-                    Text("季报").tag(ReportDimension.quarterly)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Picker("报表", selection: $reportDimension) {
+                        Text("年报").tag(ReportDimension.annual)
+                        Text("季报").tag(ReportDimension.quarterly)
+                    }
+                    .pickerStyle(.segmented)
+                    .frame(maxWidth: 240)
                 }
-                .pickerStyle(.segmented)
-
-                Button {
-                    showAddSheet = true
-                } label: {
-                    Label("添加", systemImage: "plus")
-                }
-
-                #if os(iOS)
-                Button {
-                    showSettings = true
-                } label: {
-                    Label("设置", systemImage: "gear")
-                }
-                #endif
             }
         }
         .sheet(isPresented: $showAddSheet) {
