@@ -45,15 +45,27 @@ struct AddStocksSheet: View {
                                 }
                                 .prefix(60)
 
-                            List(Array(results), selection: $selected) { s in
-                                VStack(alignment: .leading, spacing: 2) {
-                                    Text(s.name)
-                                    Text("\(s.symbol) · \(s.tsCode)")
-                                        .font(.caption)
-                                        .foregroundStyle(.secondary)
+                            ForEach(Array(results)) { s in
+                                Button {
+                                    selected = s
+                                } label: {
+                                    HStack {
+                                        VStack(alignment: .leading, spacing: 2) {
+                                            Text(s.name)
+                                            Text("\(s.symbol) · \(s.tsCode)")
+                                                .font(.caption)
+                                                .foregroundStyle(.secondary)
+                                        }
+                                        Spacer()
+                                        if selected == s {
+                                            Image(systemName: "checkmark")
+                                                .foregroundStyle(.tint)
+                                        }
+                                    }
+                                    .contentShape(Rectangle())
                                 }
+                                .buttonStyle(.plain)
                             }
-                            .frame(minHeight: 260)
                         }
                     }
 
