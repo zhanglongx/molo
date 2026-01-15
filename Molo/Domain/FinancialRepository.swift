@@ -32,20 +32,21 @@ struct FinancialRepository {
 
         let (income, cashflow, balance) = try await (incomeRows, cashflowRows, balanceRows)
 
-        let incomeMap = Dictionary(uniqueKeysWithValues: income.compactMap { row -> (String, IncomeRow)? in
+        // Upstream sometimes returns duplicate end_date rows; keep the last one.
+        let incomeMap = Dictionary(income.compactMap { row -> (String, IncomeRow)? in
             guard let endDate = row.string("end_date") else { return nil }
             return (endDate, IncomeRow(from: row))
-        })
+        }, uniquingKeysWith: { _, new in new })
 
-        let cashflowMap = Dictionary(uniqueKeysWithValues: cashflow.compactMap { row -> (String, CashflowRow)? in
+        let cashflowMap = Dictionary(cashflow.compactMap { row -> (String, CashflowRow)? in
             guard let endDate = row.string("end_date") else { return nil }
             return (endDate, CashflowRow(from: row))
-        })
+        }, uniquingKeysWith: { _, new in new })
 
-        let balanceMap = Dictionary(uniqueKeysWithValues: balance.compactMap { row -> (String, BalanceRow)? in
+        let balanceMap = Dictionary(balance.compactMap { row -> (String, BalanceRow)? in
             guard let endDate = row.string("end_date") else { return nil }
             return (endDate, BalanceRow(from: row))
-        })
+        }, uniquingKeysWith: { _, new in new })
 
         // Merge by end_date
         let endDates = Set(incomeMap.keys)
