@@ -110,11 +110,21 @@ struct AddStocksSheet: View {
             dismiss()
         case .batch:
             let parts = CodeNormalizer.splitBatch(batchText)
-            let nameByTsCode = Dictionary(uniqueKeysWithValues: env.stockCatalog.stocks.map { ($0.tsCode, $0.name) })
+            let lookup = env.stockCatalog.stocks.reduce(into: [String: StockBasic]()) { result, s in
+                for key in [s.tsCode, s.symbol, s.name] {
+                    let k = key.lowercased()
+                    if result[k] == nil { result[k] = s }
+                }
+            }
             var inserted = 0
             for p in parts {
-                if let ts = CodeNormalizer.normalizeToTsCode(p) {
-                    insert(tsCode: ts, name: nameByTsCode[ts] ?? ts)
+                let key = p.trimmingCharacters(in: .whitespacesAndNewlines)
+                if let ts = CodeNormalizer.normalizeToTsCode(key) {
+                    let name = lookup[ts.lowercased()]?.name ?? ts
+                    insert(tsCode: ts, name: name)
+                    inserted += 1
+                } else if let match = lookup[key.lowercased()] {
+                    insert(tsCode: match.tsCode, name: match.name)
                     inserted += 1
                 }
             }
