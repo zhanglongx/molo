@@ -3,7 +3,10 @@ import SwiftData
 
 struct WatchlistView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query(sort: \WatchlistItem.createdAt, order: .reverse) private var items: [WatchlistItem]
+    @Query(sort: [
+        SortDescriptor(\WatchlistItem.tsCode, order: .forward),
+        SortDescriptor(\WatchlistItem.displayName, order: .forward)
+    ]) private var items: [WatchlistItem]
 
     @Binding var selection: WatchlistItem?
     let onAdd: () -> Void
